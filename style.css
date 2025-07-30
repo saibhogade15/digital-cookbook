@@ -1,0 +1,231 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: #a3a7a9; /* or use rgb(), hsl(), or hex */
+}
+
+
+header nav{
+    background-color: hsl(201, 80%, 18%);
+    color: #a3a7a9;
+    padding: 20px;
+    display: flex ;
+    justify-content: space-between;
+    margin-top: auto;
+    z-index: 1;
+    text-align: center;
+    
+}
+
+header nav h1{
+    color: rgb(222, 233, 242);
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+ header nav form{
+    justify-content: center;
+    padding: 10px;
+ }
+
+ form input[type="text"]{
+    flex-grow: 1;
+    margin: 10px;
+ }
+
+ form input[type="text"],button[type="submit"]{
+    flex-grow: 1;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px ;
+    border-radius: 5px;
+ }
+ form button[type="submit"]{
+    background-color: #e01414;
+    color: aliceblue;
+    cursor: pointer;
+    transition: background-color 2ms ease-in-out;
+ }
+
+ form button[type="submit"]:hover,
+ .recipe button:hover,.recipe-close-button:hover{
+    background-color: #e57b7b;
+  
+ }
+ /*main*/
+ .recipe-container{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 30px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+
+ }
+
+ .recipe{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: rgb(36, 75, 107);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    transition: transform 0.3ms ease-in-out;
+ }
+
+ .recipe:hover{
+    transform: scale(1.02);
+}
+
+
+.recipe img{
+    height: 300px;
+}
+
+.recipe h3{
+    font-size: 24px;
+}
+
+.recipe p{
+    font-size: 20px;
+    color: rgb(53, 52, 52);
+    margin: 5px 0;
+}
+
+.recipe span{
+    font-weight: 600;
+}
+
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    margin:18px auto;
+    cursor: pointer;
+   background-color: #940808;
+   color: #fff;
+}
+
+
+
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    font-style: initial;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    background-color: #6e6c6cd9;border-radius: 12px;
+    color: #f3efef;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll ;
+    
+}
+
+.recipe-details-content{
+    padding: 30px;
+}
+.ingredientslists {
+  list-style-type: disc;
+  list-style-position: outside; /* or inside for compact bullets */
+  margin-left: 20px;
+  padding-left: 0;
+  display: block;
+}
+
+.ingredientslists li {
+  margin: 5px 0;
+  padding-left: 0;
+  display: list-item;  /* Ensures bullets are shown */
+}
+
+
+
+.recipeInstructions p{
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+
+.recipe-close-button{
+    flex-grow: 1;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px ;
+    border-radius: 5px;
+    background-color: #ff0101;
+    color: #fff;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb{
+    background-color: #fbf7f7;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+
+}
+
+body::-webkit-scrollbar{
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #545555;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #f3efef;
+
+}
+
+.recipe-details img{
+    border-image-width: 40%;
+   align-content: center;
+}
+@media screen and (max-width:600px) {
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+    }
+    
+}
+
+
+
